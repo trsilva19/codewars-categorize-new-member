@@ -50,13 +50,18 @@
     Revisar o Dominio e entidades ✅ 
     refatorirar a idade para popular o isValid ✅
     should return isValid true if age greater than zero ✅
-    validar se a o handicap é um valor valido enter -2 e 26 🚧
-        handicap menor que -2 deve retornar isValid = false
+    validar se a o handicap é um valor valido enter -2 e 26 
+        handicap menor que -2 deve retornar isValid = false ✅
         WTF: não obtive uma luz vermelhar ao incluir o esse teste, então fiz um refactory na entidade member
 
         handicap maior que -2 deve retornar isValid = true 
+        WTF: não obtive uma luz vermelhar ao incluir esse teste, então não optei por não incluir o mesmo 
+        
+        handicap maior que 26 deve retornar isValid = false 🚧
+
+
         handicap igual a -2 deve retornar isValid = true
         handicap menor que 26 deve retornar isValid = true
         handicap igual a 26 deve retornar isValid = true
-        handicap maior que 26 deve retornar isValid = false
+        
         handicap entre -2 e 26 deve retornar isValid = true
