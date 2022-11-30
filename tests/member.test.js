@@ -36,4 +36,12 @@ describe('Member tests', () => {
         expect(member.isValid).toBe(true);
     });
 
+    test("should be return isValid equal to false if handicap less than -2", async () => {
+        let age = 10;
+        let handicap = -10;
+        let member = new Member(age, handicap);
+
+        expect(member.isValid).toBe(false);
+    });
+
 });
