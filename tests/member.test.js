@@ -20,4 +20,12 @@ describe('Member tests', () => {
         expect(member.age).toBe(-100);
     });
 
+    test("should return -100 if age less than zero", async () => {
+        let age = -2;
+        let handicap = 20;
+        let member = new Member(age, handicap);
+
+        expect(member.age).toBe(-100);
+    });
+
 });
