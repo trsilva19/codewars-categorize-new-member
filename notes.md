@@ -16,11 +16,18 @@
     O membro deve ser registrado com uma idade, handicap e categoria, onde ambos são numeros inteiros 
     O resultado esperado apos o cadastros de membros é uma lista na odem de entrada exibindo a categoria do membro(open ou senior)
 
+    <!-- Adicionado no pomodoro 3 -->
+    Caso um membro não tenha registros validos, deve ser removido da classificação
+    Um registro invalido é definido caso idade ou handicap não sejam validos 
+
 # Entities
     Membro 
         idade
         handicap
         categoria
+
+        <!-- Adicionado no pomodoro 3 -->
+        isValid
 
     Classificador de membros 
         classificar membros 
@@ -37,14 +44,17 @@
 # Pomodoro 2 ( 30-11-22 - 25min / 5min pause)
     Validate if member entity has age and handicap ✅ 
     should return -100 if age is zero ✅ 
-    should return -100 if age less than zero 🚧
+    should return -100 if age less than zero ✅ 
 
-# Pomodoro 2 ( 30-11-22 - 25min / 5min pause)
+# Pomodoro 3 ( 30-11-22 - 25min )
+    Revisar o Dominio e entidades ✅ 
+    refatorirar a idade para popular o isValid ✅
+    should return isValid true if age greater than zero ✅
     validar se a o handicap é um valor valido enter -2 e 26
-        maior que -2
-        igual a -2 
-        menor que -2 
-        menor que 26
-        igual a 26
-        maior que 26
-        valor entre -2 e 26
+        handicap maior que -2 deve retornar isValid = true
+        handicap igual a -2 deve retornar isValid = true
+        handicap menor que -2 deve retornar isValid = false
+        handicap menor que 26 deve retornar isValid = true
+        handicap igual a 26 deve retornar isValid = true
+        handicap maior que 26 deve retornar isValid = false
+        handicap entre -2 e 26 deve retornar isValid = true

@@ -1,7 +1,13 @@
 module.exports = class Member {
     
+    isValid = false;
+
     constructor(age, handicap){
-        this.age = age <= 0 ? -100: age;
+        if( age > 0 ){
+            this.isValid = true
+        }
+        
+        this.age = age;
         this.handicap = handicap;
     }
 
