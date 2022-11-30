@@ -3,7 +3,7 @@ module.exports = class Member {
     isValid = false;
 
     constructor(age, handicap) {
-        if( age > 0 && (handicap >= -2 && handicap <= 26)) {
+        if( age > 0 && (handicap < -2 )) {
             this.isValid = true
         }
         
