@@ -1,0 +1,1 @@
+# codewars-categorize-new-member
