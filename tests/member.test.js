@@ -20,11 +20,4 @@ describe('Member tests', () => {
         expect(member.age).toBe(-100);
     });
 
-    // test("should return a value equal to age if it is a valid age", async () => {
-    //     let age = 25;
-    //     let handicap = 20;
-    //     let member = new Member(age, handicap);
-
-    //     expect(member.age).toBe(25);
-    // });
 });
