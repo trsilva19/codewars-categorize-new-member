@@ -5,6 +5,21 @@
 🚧 WIP  
 ❌ ERROR  
 
+# Exercicio
+The Western Suburbs Croquet Club has two categories of membership, Senior and Open. They would like your help with an application form that will tell prospective members which category they will be placed.
+
+To be a senior, a member must be at least 55 years old and have a handicap greater than 7. In this croquet club, handicaps range from -2 to +26; the better the player the lower the handicap.
+
+Input
+Input will consist of a list of pairs. Each pair contains information for a single potential member. Information consists of an integer for the person's age and an integer for the person's handicap.
+
+Output
+Output will consist of a list of string values (in Haskell and C: Open or Senior) stating whether the respective member is to be placed in the senior or open category.
+
+Example
+input =  [[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]
+output = ["Open", "Open", "Senior", "Open", "Open", "Senior"]
+
 # Domain
     Classificar membros em duas categorias: Open e Senior
     Membros que são classificados como senior devem ser enquadrados em:
@@ -17,7 +32,7 @@
     O resultado esperado apos o cadastros de membros é uma lista na odem de entrada exibindo a categoria do membro(open ou senior)
 
     <!-- Adicionado no pomodoro 3 -->
-    Caso um membro não tenha registros validos, deve ser removido da classificação
+    Caso um membro não tenha registros validos, deve ter a classificação vazia
     Um registro invalido é definido caso idade ou handicap não sejam validos 
 
 # Entities
@@ -39,7 +54,6 @@
     Definir dominio ✅ 
     Definir Entidades ✅ 
     Criar estrutura inicial de projeto node ✅ 
-    Validar se entidade membro possui idade e handicap 🚧
 
 # Pomodoro 2 ( 30-11-22 - 25min / 5min pause)
     Validate if member entity has age and handicap ✅ 
@@ -64,10 +78,11 @@
 # Pomodoro 4 ( 01-12-22 - 25min / 5min pause)
     revisar oq foi feito
     validar se a o handicap é um valor valido enter -2 e 26  
-        handicap igual a -2 deve retornar isValid = true  ✅ / ❌
-        handicap menor que 26 deve retornar isValid = true  ✅ / ❌
-        handicap igual a 26 deve retornar isValid = true  ✅ / ❌
         WTF: Obtive sucesso em todos os testes acima 
+        handicap igual a -2 deve retornar isValid = true  ✅ 
+        handicap menor que 26 deve retornar isValid = true  ✅ 
+        handicap igual a 26 deve retornar isValid = true  ✅ 
+        
     
 # Pomodoro 5 ( 01-12-22 - 25min / 5min pause)
     Classificar membro 
@@ -86,7 +101,23 @@
         usuarios[(60, 10), (55, 8)] deve retornar categorias = senior, senior ✅
         usuarios[(60, 10), (40, 8)] deve retornar categoria = senior, open ✅
         usuarios[(55, 7), (40, 8)] deve retornar categoria = open, open ✅
-        usuarios[(0, 10), (-1, 8)] deve retornar cateorias = vazio, vazio
-        usuarios[] deve retornar cateorias = vazio, vazio
+        usuarios[(0, 10), (-1, 8)] deve retornar cateorias = vazio, vazio ✅
+        usuarios[] deve retornar uma lista vazia ✅
+
+# Pomodoro 6 ( 01-12-22 - 25min / 5min pause)
+    mostar lista classificada
+        deve retornar uma lista com 1 senior member para a entrada [ (60, 10) ] ✅
+
+        WTF: todos os cenarios de testes abaixo não apresentaram erro apos o primeiro
+        deve retornar uma lista com 1 open member para a entrada [(40, 8)] ✅
+        deve retornar uma lista vazia open member para a entrada [(0, 10)] ✅
+        deve retornar uma lista com 2 senior member para a entrada [(60, 10), (55, 8)] ✅
+        deve retornar uma lista com 1 senior e 1 open member para a entrada [(60, 10), (40, 8)] ✅
+        deve retornar uma lista com 2 open member para a entrada [(55, 7), (40, 8)] ✅
+        deve retornar uma lista com 2 categorias vazia para a entrada [(0, 10), (-1, 8)] ✅
+        usuarios[] deve retornar uma lista vazia ✅
+        deve retornar uma lista com 1 categoria senior, 1 categoria open e uma vazia a para a entrada [(60, 10), (40, 8), (-1, 8)] ✅
+
+    
 
 

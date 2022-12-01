@@ -16,4 +16,10 @@ module.exports = class Classifier {
          });
     } 
 
+    viewCategorizedMembers(memberList){
+        let categoryList = [];
+        memberList.forEach(member => { categoryList.push(member.category) });
+        return categoryList;
+    }
+
 }
