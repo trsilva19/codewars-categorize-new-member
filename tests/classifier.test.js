@@ -53,14 +53,51 @@ describe('Member tests', () => {
         expect(memberList[0].category).toBe("");
     });
 
-    // test("should be return [senior, senior] member for memberList like [(60,10), (55, 8)] ", async () => {
-    //     let member1 = new Member(60, 10);
-    //     let member2 = new Member(55, 8);
-    //     let memberList = [member1, member2];
-    //     new Classifier().categorize(memberList);
+    test("should be return [senior, senior] member for memberList like [(60,10), (55, 8)] ", async () => {
+        let member1 = new Member(60, 10);
+        let member2 = new Member(55, 8);
+        let memberList = [member1, member2];
+        new Classifier().categorize(memberList);
 
-    //     expect(memberList[0].category).toBe("senior");
-    //     expect(memberList[1].category).toBe("senior");
-    // });
+        expect(memberList[0].category).toBe("senior");
+        expect(memberList[1].category).toBe("senior");
+    });
+
+    test("should be return [senior, open] member for memberList like [(60,10), (40, 8)] ", async () => {
+        let member1 = new Member(60, 10);
+        let member2 = new Member(40, 8);
+        let memberList = [member1, member2];
+        new Classifier().categorize(memberList);
+
+        expect(memberList[0].category).toBe("senior");
+        expect(memberList[1].category).toBe("open");
+    });
+
+    test("should be return [open, open] member for memberList like [(60,10), (40, 8)] ", async () => {
+        let member1 = new Member(55, 7);
+        let member2 = new Member(40, 8);
+        let memberList = [member1, member2];
+        new Classifier().categorize(memberList);
+
+        expect(memberList[0].category).toBe("open");
+        expect(memberList[1].category).toBe("open");
+    });
+
+    test("should be return ['', ''] member for memberList like [(0,10), (-1, 8)] ", async () => {
+        let member1 = new Member(0, 10);
+        let member2 = new Member(-1, 8);
+        let memberList = [member1, member2];
+        new Classifier().categorize(memberList);
+
+        expect(memberList[0].category).toBe("");
+        expect(memberList[1].category).toBe("");
+    });
+
+    test("should be return list length equal zero for empty list", async () => {
+        let memberList = [];
+        new Classifier().categorize(memberList);
+
+        expect(memberList.length).toBe(0);
+    });
 
 });

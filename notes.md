@@ -70,7 +70,7 @@
         WTF: Obtive sucesso em todos os testes acima 
     
 # Pomodoro 5 ( 01-12-22 - 25min / 5min pause)
-    Classificar membros 
+    Classificar membro 
         usuario(55, 8) deve retornar categoria = senior ✅
         usuario(60, 10) deve retornar categoria = senior ✅
         WTF: Obtive sucesso em todos os testes acima 
@@ -80,5 +80,13 @@
         usuario(0, -1) deve retornar categoria vazia
 
 # Pomodoro 6 ( 01-12-22 - 25min / 5min pause)
+    Classificar membro 
+        usuario(0, -1) deve retornar categoria vazia ✅
     Classificar membros 
-        usuario(0, -1) deve retornar categoria vazia
+        usuarios[(60, 10), (55, 8)] deve retornar categorias = senior, senior ✅
+        usuarios[(60, 10), (40, 8)] deve retornar categoria = senior, open ✅
+        usuarios[(55, 7), (40, 8)] deve retornar categoria = open, open ✅
+        usuarios[(0, 10), (-1, 8)] deve retornar cateorias = vazio, vazio
+        usuarios[] deve retornar cateorias = vazio, vazio
+
+
