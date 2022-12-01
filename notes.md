@@ -61,16 +61,24 @@
 
 <!-- Long break -->
 
-# Pomodoro 4 ( 01-12-22 - 25min )
+# Pomodoro 4 ( 01-12-22 - 25min / 5min pause)
     revisar oq foi feito
     validar se a o handicap é um valor valido enter -2 e 26  
         handicap igual a -2 deve retornar isValid = true  ✅ / ❌
         handicap menor que 26 deve retornar isValid = true  ✅ / ❌
         handicap igual a 26 deve retornar isValid = true  ✅ / ❌
         WTF: Obtive sucesso em todos os testes acima 
-    Classificar membros senior
-        usuario(55, 8) deve retornar categoria = senior
-        usuario(60, 10) deve retornar categoria = senior
-        usuario(55, 7) deve retornar categoria = open
-        usuario(40, 8) deve retornar categoria = open
+    
+# Pomodoro 5 ( 01-12-22 - 25min / 5min pause)
+    Classificar membros 
+        usuario(55, 8) deve retornar categoria = senior ✅
+        usuario(60, 10) deve retornar categoria = senior ✅
+        WTF: Obtive sucesso em todos os testes acima 
+
+        usuario(55, 7) deve retornar categoria = open ✅
+        usuario(40, 8) deve retornar categoria = open ✅
+        usuario(0, -1) deve retornar categoria vazia
+
+# Pomodoro 6 ( 01-12-22 - 25min / 5min pause)
+    Classificar membros 
         usuario(0, -1) deve retornar categoria vazia

@@ -76,13 +76,4 @@ describe('Member tests', () => {
         expect(member.isValid).toBe(true);
     });
 
-    test("should be return senior member for member like age = 55 and handicap = 8", async () => {
-        let age = 55;
-        let handicap = 8;
-        let category = "senior";
-        let member = new Member(age, handicap);
-
-        expect(member.category).toBe(category);
-    });
-
 });
