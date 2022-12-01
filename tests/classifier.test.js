@@ -7,45 +7,50 @@ describe('Member tests', () => {
         let age = 55;
         let handicap = 8;
         let member = new Member(age, handicap);
-        new Classifier().categorize(member);
+        let memberList = [member];
+        new Classifier().categorize(memberList);
 
-        expect(member.category).toBe("senior");
+        expect(memberList[0].category).toBe("senior");
     });
 
     test("should be return senior member for member like age = 60 and handicap = 10", async () => {
         let age = 60;
         let handicap = 10;
         let member = new Member(age, handicap);
-        new Classifier().categorize(member);
+        let memberList = [member];
+        new Classifier().categorize(memberList);
 
-        expect(member.category).toBe("senior");
+        expect(memberList[0].category).toBe("senior");
     });
 
     test("should be return open member for member like age = 55 and handicap = 7", async () => {
         let age = 55;
         let handicap = 7;
         let member = new Member(age, handicap);
-        new Classifier().categorize(member);
+        let memberList = [member];
+        new Classifier().categorize(memberList);
 
-        expect(member.category).toBe("open");
+        expect(memberList[0].category).toBe("open");
     });
 
     test("should be return open member for member like age = 40 and handicap = 8", async () => {
         let age = 40;
         let handicap = 8;
         let member = new Member(age, handicap);
-        new Classifier().categorize(member);
+        let memberList = [member];
+        new Classifier().categorize(memberList);
 
-        expect(member.category).toBe("open");
+        expect(memberList[0].category).toBe("open");
     });
 
     test("should be return open member for member like age = 0 and handicap = -1", async () => {
         let age = 0;
         let handicap = -1;
         let member = new Member(age, handicap);
-        new Classifier().categorize(member);
+        let memberList = [member];
+        new Classifier().categorize(memberList);
 
-        expect(member.category).toBe("");
+        expect(memberList[0].category).toBe("");
     });
 
     // test("should be return [senior, senior] member for memberList like [(60,10), (55, 8)] ", async () => {
